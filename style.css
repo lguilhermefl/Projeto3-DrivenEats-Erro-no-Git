@@ -18,7 +18,8 @@ body {
     position: fixed;
     left: 0;
     top: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
@@ -36,7 +37,7 @@ body {
 }
 
 .container {
-    margin-left: 18px;
+    margin-left: 13px;
     margin-top: 92px;
     display: flex;
     margin-bottom: 110px;
@@ -46,6 +47,7 @@ body {
 .container h4 {
     font-size: 26px;
     color: #333;
+    margin-left: 5px;
 }
 
 .container p {
@@ -61,22 +63,24 @@ span {
 }
 
 .categorias {
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .opcoes {
     margin-top: 16px;
+    padding: 0 5px 5px 5px;
     overflow-x: scroll;
     display: flex;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
   
-  .opcoes::-webkit-scrollbar {
+.opcoes::-webkit-scrollbar {
     display: none;
   }
 
-.opcoes > div {
+.produto {
+    width: 172px;
     height: 216px;
     background-color: #fff;
     display: flex;
@@ -87,6 +91,20 @@ span {
     margin-right: 15px;
     padding: 14px;
     box-sizing: border-box;
+    box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 10%);
+    position: relative;
+}
+
+.selecionado {
+    border: 4px solid #32B72F;
+    padding: 10px;
+}
+
+.check {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    color: #32B72F;
 }
 
 .opcoes > div div {
@@ -106,6 +124,7 @@ span {
     position: fixed;
     left: 0px;
     bottom: 0px;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,8 +144,13 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
 .botao-pedido > p {
     width: 215px;
+}
+
+.escondido {
+    display: none;
 }
